@@ -1,1 +1,17 @@
 /*  your css code here. If applicable */
+let inputs = document.getElementsByClassName("code");
+
+codes.forEach((input,index)=>{
+	input.addEventListener("input",()=>{
+		if(input.value.length>0 && index <input.length-1){
+			inputs[index+1].focus();
+		}
+	})
+
+	input.addEventListener("keydown",e=>{
+		if(e.key=="BackSpace" && input.value=="" && index>0){
+			inputs[index-1].focus();
+		}
+	})
+			
+})
